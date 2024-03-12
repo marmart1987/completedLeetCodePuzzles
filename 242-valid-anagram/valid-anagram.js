@@ -3,8 +3,6 @@
  * @param {string} t
  * @return {boolean}
  */
-var isAnagram = function(s, t) {
-     s = s.split('').sort().join()
-    t = t.split('').sort().join()
-    return s == t
+var isAnagram = function(s, t) {    
+    return  s = s.split('').sort().join() ==  t.split('').sort().join()
 };
