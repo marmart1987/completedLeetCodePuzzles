@@ -6,8 +6,10 @@
 var intersection = function(nums1, nums2) {
   let result = [];
   for (i in nums1)  {
-    if((nums2.indexOf(nums1[i]) !== -1 ) && result.indexOf(nums1[i]) === -1 ){
-result.push(nums1[i])
+    if( (nums2.indexOf(nums1[i]) !== -1 ) 
+       && result.indexOf(nums1[i]) === -1 )  {
+           
+       result.push(nums1[i])
     }
   }
   return result
