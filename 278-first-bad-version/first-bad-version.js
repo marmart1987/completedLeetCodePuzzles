@@ -20,10 +20,8 @@ var solution = function (isBadVersion) {
     return function (n) {
         let min = 0
         let max = n
-        for (let i = 0; i < 100; i++) {
+        while (true){
             let ans = binarySearch(min, max, isBadVersion)
-           console.log(ans)
-
             min = ans[0]
             max = ans[1]
             if (!max) {
@@ -41,7 +39,6 @@ function binarySearch(min, max, isBadVersion) {
     let mid = Math.ceil((min + max) / 2)
     let result = isBadVersion(mid)
     if (result) {
-        console.log(min >= mid - 1)
         if (min >= mid - 1) {
             return mid
         }
@@ -49,5 +46,5 @@ function binarySearch(min, max, isBadVersion) {
     } else {
         return [mid, max]
     }
-   
+
 }
