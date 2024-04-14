@@ -10,18 +10,16 @@ var isIsomorphic = function(s, t) {
         hNum = 0
         for (i in string){
             let char = string[i]
-            //console.log(map,str,char)
             if(Object.hasOwn(map,char)){
-                //console.log("Character exists!",char)
+                //Character exists!
                 str.push(map[char])
             }else{
-                //console.log("Character doesn't exist",char)
+                //Character doesn't exist
                 map[char] = hNum                
                 str.push(hNum)
                 hNum++
             }        
         }
-        //console.log(str,str.join(" "))
         return str.join(" ")
     }
     return toUniform(s) === toUniform(t)
