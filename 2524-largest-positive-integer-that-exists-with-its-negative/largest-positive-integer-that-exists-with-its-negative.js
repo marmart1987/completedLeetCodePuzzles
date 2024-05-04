@@ -9,11 +9,7 @@ var findMaxK = function(nums) {
         return false
     }
     let answers = posNums.filter(bothExist)
-    if(answers.length  === 0){return -1}
-    let max = 0;
-    function maximumInArray (element){
-        max = Math.max(max,element)
-    }
-    answers.forEach(maximumInArray)
-    return max
+    if(answers.length === 0){return -1} 
+
+    return Math.max(...answers)
 };
